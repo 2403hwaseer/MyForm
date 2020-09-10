@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Signup Page</title>
+    </head>
+    <body>
+  <div class="login-box">
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link">Login</a>
+      <a href="#" id="signup-box-link">Sign Up</a>
+    </div>
+    <div class="social-login">
+      
+      <a href="#">
+        <i class="fa fa-google-plus fa-lg"></i>
+        Google
+      </a>
+      <a href="#">
+        <i class="fa fa-facebook fa-lg"></i>
+       facebook
+      </a>
+      <a href="#">
+        <i class="fa fa-linkedin fa-lg"></i>
+        linkedin
+      </a>
+    </div>
+    <form class="email-login">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Log in</button>
+      </div>
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+    </form>
+    <form class="email-signup">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Sign Up</button>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+  $(".email-signup").hide();
+  $("#signup-box-link").click(function(){
+  $(".email-login").fadeOut(100);
+  $(".email-signup").delay(100).fadeIn(100);
+  $("#login-box-link").removeClass("active");
+  $("#signup-box-link").addClass("active");
+  });
+  $("#login-box-link").click(function(){
+  $(".email-login").delay(100).fadeIn(100);;
+  $(".email-signup").fadeOut(100);
+  $("#login-box-link").addClass("active");
+  $("#signup-box-link").removeClass("active");
+});
+</script>
+  </body>
+</html>
